@@ -32,13 +32,19 @@ dpkg       1101
 ##  Thought Process
 
 ```
-I approached this the way I usually do: start by understanding the goal, break it into smaller, logical parts, and then solve those pieces one by one. I prefer having something working early, even if it's basic, then iterating and improving. I committed often to reflect those phases of initial structure, functionality, cleanup, and polish.
+I approached this the way I usually do: start by understanding the goal, break it into smaller, logical parts, and
+then solve those pieces one by one. I prefer having something working early, even if it's basic, then iterating and
+ improving. I committed often to reflect those phases of initial structure, functionality, cleanup, and polish.
 
-For this problem, I started by making sure I fully understood the Contents file format and the structure of Debian mirrors. Once I knew what kind of data I was working with, I focused on getting the CLI working and reading it efficiently.
+For this problem, I started by making sure I fully understood the Contents file format and the structure of Debian
+ mirrors. Once I knew what kind of data I was working with, I focused on getting the CLI working and reading it efficiently.
 
-I handled parsing line by line to avoid unnecessary memory usage, then built a map of package counts. After that, I worked on sorting and formatting the output. Only after the full logic was working did I go back to tune performance, add tests, rename variables for clarity, and clean up the code.
+I handled parsing line by line to avoid unnecessary memory usage, then built a map of package counts.
+After that, I worked on sorting and formatting the output. Only after the full logic was working did
+I go back to tune performance, add tests, rename variables for clarity, and clean up the code.
 
-Performance matters, but I didn’t over-optimize. The buffer size is tuned, and memory usage is controlled. The whole thing is scalable and can be improved further if needed.
+Performance matters, but I didn’t over-optimize. The buffer size is tuned, and memory usage is controlled.
+The whole thing is scalable and can be improved further if needed.
 
 ```
 
